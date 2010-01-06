@@ -36,13 +36,6 @@ task :build do
   end
 end
 
-desc "Install all gems"
-task :install do 
-  PACKAGES.each do |dir|
-    Dir.chdir(dir) { srake 'install' }
-  end
-end
-
 desc "Release all gems to gemcutter"
 task :release do 
   PACKAGES.each do |dir|
