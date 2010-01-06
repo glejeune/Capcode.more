@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "capcode-render-webdav.gemspec",
      "examples/auth-webdav.rb",
      "examples/render-webdav.rb",
      "lib/capcode/render/webdav.rb"

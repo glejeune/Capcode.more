@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "capcode-render-static.gemspec",
      "examples/render-static.rb",
      "examples/render-static.ru",
      "examples/render-use.rb",

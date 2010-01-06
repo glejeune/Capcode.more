@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "capcode-render-binary.gemspec",
      "examples/render-binary.rb",
      "lib/capcode/render/binary.rb"
   ]

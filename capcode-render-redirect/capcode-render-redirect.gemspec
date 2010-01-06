@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "capcode-render-redirect.gemspec",
      "examples/render-redirect.rb",
      "lib/capcode/render/redirect.rb"
   ]

@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "capcode-render-erb.gemspec",
      "examples/erb/cf.rhtml",
      "examples/erb/cf_layout.rhtml",
      "examples/render-erb.rb",

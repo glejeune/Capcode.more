@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "capcode-render-mustache.gemspec",
      "examples/mustache/with_class.mustache",
      "examples/mustache/without_class.mustache",
      "examples/render-mustache.rb",

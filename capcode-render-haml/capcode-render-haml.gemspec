@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "capcode-render-haml.gemspec",
      "examples/haml/cf.haml",
      "examples/haml/cf_layout.haml",
      "examples/haml/style.sass",

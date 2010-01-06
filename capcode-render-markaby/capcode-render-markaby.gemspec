@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "capcode-render-markaby.gemspec",
      "examples/render-markaby.rb",
      "lib/capcode/render/markaby.rb"
   ]

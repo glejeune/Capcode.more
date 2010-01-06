@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "capcode-base-datamapper.gemspec",
      "examples/blog-dm.rb",
      "examples/blog-dm.yml",
      "lib/capcode/base/dm.rb"

@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "capcode-base-mongoid.gemspec",
      "examples/blog-mongodb-run.rb",
      "examples/blog-mongodb.rb",
      "examples/blog-mongodb.yml",

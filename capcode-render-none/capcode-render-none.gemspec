@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "capcode-render-none.gemspec",
      "lib/capcode/render/none.rb"
   ]
   s.homepage = %q{http://github.com/glejeune/Capcode.more/tree/master/capcode-render-none}

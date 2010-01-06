@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "capcode-base-sequel.gemspec",
      "examples/blog-sq.rb",
      "examples/blog-sq.yml",
      "lib/capcode/base/sequel.rb"

@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "capcode-base-couchrest.gemspec",
      "examples/blog-couchdb-CR.rb",
      "lib/capcode/base/couchrest.rb"
   ]

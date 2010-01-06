@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "capcode-render-coffee-script.gemspec",
      "examples/coffee/alert.coffee",
      "examples/render-coffee.rb",
      "lib/capcode/render/coffee.rb"

@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "capcode-render-mail.gemspec",
      "examples/mail/mail_html.rhtml",
      "examples/mail/mail_text.rhtml",
      "examples/mail/ok.rhtml",
