@@ -1,0 +1,3 @@
+= capcode-base-sequel
+
+Capcode plugin to access databases via Sequel

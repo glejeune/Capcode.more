@@ -1,0 +1,17 @@
+require 'rubygems'
+require 'rake'
+
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gem|
+    gem.name = "capcode-render-erb"
+    gem.summary = %Q{Capcode plugin to render via Erb}
+    gem.description = gem.summary
+    gem.email = "gregoire.lejeune@free.fr"
+    gem.homepage = "http://github.com/glejeune/Capcode.more/tree/master/%s" % gem.name
+    gem.authors = ["Gregoire Lejeune"]
+  end
+  Jeweler::GemcutterTasks.new
+rescue LoadError
+  puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
+end

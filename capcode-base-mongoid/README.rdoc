@@ -1,0 +1,3 @@
+= capcode-base-mongoid
+
+Capcode plugin to access MongoDB via MongoID

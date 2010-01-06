@@ -1,0 +1,3 @@
+= capcode-render-erb
+
+Capcode plugin to render via Erb

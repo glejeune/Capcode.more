@@ -1,0 +1,3 @@
+= capcode-render-sass
+
+Capcode plugin to render via Sass

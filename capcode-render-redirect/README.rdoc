@@ -1,0 +1,3 @@
+= capcode-render-redirect
+
+Capcode plugin to render redirection

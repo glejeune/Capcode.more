@@ -1,0 +1,7 @@
+= Capcode.more
+
+Copyright (C) 2009, 2010 Gregoire Lejeune
+
+* home : http://github.com/glejeune/Capcode
+* doc : http://rdoc.info/projects/glejeune/Capcode
+* book (fr) : http://www.algorithmique.net/capcode/

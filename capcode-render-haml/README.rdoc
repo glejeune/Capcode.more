@@ -1,0 +1,3 @@
+= capcode-render-haml
+
+Capcode plugin to render via Haml

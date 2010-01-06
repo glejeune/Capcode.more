@@ -1,0 +1,3 @@
+= capcode-base-datamapper
+
+Capcode plugin to access databases via DataMapper

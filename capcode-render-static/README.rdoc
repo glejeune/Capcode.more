@@ -1,0 +1,3 @@
+= capcode-render-static
+
+Capcode plugin to render static file

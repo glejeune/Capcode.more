@@ -1,0 +1,3 @@
+= capcode-base-couchrest
+
+Capcode plugin to access CouchDB via CouchRest

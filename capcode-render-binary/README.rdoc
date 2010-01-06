@@ -1,0 +1,3 @@
+= capcode-render-binary
+
+Capcode plugin to render binary file

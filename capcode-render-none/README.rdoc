@@ -1,0 +1,3 @@
+= capcode-render-none
+
+Capcode plugin to render nothing

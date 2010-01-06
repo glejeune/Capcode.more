@@ -1,0 +1,3 @@
+= capcode-render-mail
+
+Capcode plugin to send mail

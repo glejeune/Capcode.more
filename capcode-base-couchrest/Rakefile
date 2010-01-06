@@ -1,0 +1,19 @@
+require 'rubygems'
+require 'rake'
+
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gem|
+    gem.name = "capcode-base-couchrest"
+    gem.summary = %Q{Capcode plugin to access CouchDB via CouchRest}
+    gem.description = gem.summary
+    gem.email = "gregoire.lejeune@free.fr"
+    gem.homepage = "http://github.com/glejeune/Capcode.more/tree/master/%s" % gem.name
+    gem.authors = ["Gregoire Lejeune"]
+
+    gem.add_dependency('couchrest')
+  end
+  Jeweler::GemcutterTasks.new
+rescue LoadError
+  puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
+end

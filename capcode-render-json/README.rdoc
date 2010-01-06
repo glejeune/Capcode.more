@@ -1,0 +1,3 @@
+= capcode-render-json
+
+Capcode plugin to render JSON

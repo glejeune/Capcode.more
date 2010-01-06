@@ -1,0 +1,3 @@
+= capcode-render-coffee-script
+
+Capcode plugin to render JavaScript via CoffeeScript
