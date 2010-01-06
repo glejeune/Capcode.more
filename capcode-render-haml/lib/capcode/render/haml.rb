@@ -34,7 +34,7 @@ module Capcode
       end
       
       # Update options
-      opts = (Capcode.options[:haml] || {}).merge(opts)
+      opts = (Capcode::Configuration.options[:haml] || {}).merge(opts)
       
       # Get Layout file
       layout = opts.delete(:layout)||:layout

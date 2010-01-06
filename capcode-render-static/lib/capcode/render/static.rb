@@ -3,7 +3,7 @@ module Capcode
     def render_static( f, opts = {} ) #:nodoc:
       # Update options
       opts = { :exact_path => true }.merge(opts)
-      opts = (Capcode.options[:static] || {}).merge(opts)
+      opts = (Capcode::Configuration.options[:static] || {}).merge(opts)
       
       # Update Content-Type
       @response['Content-Type'] = opts[:content_type] if opts.keys.include?(:content_type)

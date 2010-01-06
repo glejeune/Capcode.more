@@ -15,7 +15,7 @@ module Capcode
       layout = opts.delete(:layout)||:layout
 
       # Update options
-      (Capcode.options[:markaby] || {}).merge(opts).each do |k, v|
+      (Capcode::Configuration.options[:markaby] || {}).merge(opts).each do |k, v|
         Markaby::Builder.set(k, v)
       end
       

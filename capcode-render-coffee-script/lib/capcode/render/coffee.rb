@@ -34,7 +34,7 @@ module Capcode
       end
       
       # Update options
-      opts = (Capcode.options[:coffee] || {}).merge(opts)
+      opts = (Capcode::Configuration.options[:coffee] || {}).merge(opts)
 
       # Get coffee File
       f = f + ".coffee" if File.extname( f ) != ".coffee"
