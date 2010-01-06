@@ -11,7 +11,7 @@ begin
     gem.homepage = "http://github.com/glejeune/Capcode.more/tree/master/%s" % gem.name
     gem.authors = ["Gregoire Lejeune"]
 
-    gem.add_dependency('rack_dav')
+    gem.add_dependency('georgi-rack_dav')
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
