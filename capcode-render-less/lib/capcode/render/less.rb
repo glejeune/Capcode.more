@@ -13,7 +13,7 @@ module Capcode
       Capcode::Configuration.set :coffee, p
     end
     
-    def render_coffee( f, opts ) #:nodoc:
+    def render_less( f, opts ) #:nodoc:
       if @coffee_path.nil?
         @coffee_path = Capcode::Configuration.get( :coffee ) || Capcode.static()
       end

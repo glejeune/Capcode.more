@@ -15,6 +15,16 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = [
     "README.rdoc"
   ]
+  s.files = [
+    "LICENSE",
+     "README.rdoc",
+     "Rakefile",
+     "VERSION",
+     "capcode-render-less.gemspec",
+     "examples/less/style.less",
+     "examples/render-less.rb",
+     "lib/capcode/render/less.rb"
+  ]
   s.homepage = %q{http://github.com/glejeune/Capcode.more/tree/master/capcode-render-less}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]

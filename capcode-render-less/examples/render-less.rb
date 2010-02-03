@@ -1,8 +1,5 @@
 require 'rubygems'
 require 'capcode'
-require 'capcode/render/markaby'
-$:.unshift( "../lib" )
-require 'capcode/render/less'
 
 module Capcode
   set :less, "less"
@@ -25,7 +22,7 @@ module Capcode::Views
   def glop
     html do
       head do
-        link :href => URL(Style), :rel => 'stylesheet', :type => 'text/css'
+        link :href => URL(Capcode::Style), :rel => 'stylesheet', :type => 'text/css'
       end
       body do
         yield
