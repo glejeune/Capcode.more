@@ -1,26 +1,6 @@
-PACKAGES = %w{
-  capcode-base-activerecord
-  capcode-base-couch_foo
-  capcode-base-couchrest
-  capcode-base-datamapper
-  capcode-base-mongoid
-  capcode-base-sequel
-  capcode-render-binary
-  capcode-render-coffee-script
-  capcode-render-email
-  capcode-render-erb
-  capcode-render-haml
-  capcode-render-json
-  capcode-render-less
-  capcode-render-markaby
-  capcode-render-mustache
-  capcode-render-none
-  capcode-render-redirect
-  capcode-render-sass
-  capcode-render-static
-  capcode-render-webdav
-  capcode-render-xml
-}
+PACKAGES = Dir.glob( "*" ).delete_if{ |f| 
+  File.directory?(f) == false
+}.map{ |f| File.basename(f) }
 
 def rake(cmd)
   sh "#{RUBY} -S rake #{cmd}", :verbose => true
