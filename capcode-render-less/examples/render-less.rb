@@ -1,5 +1,7 @@
 require 'rubygems'
 require 'capcode'
+$:.unshift( "../lib")
+require 'capcode/render/less'
 
 module Capcode
   set :less, "less"
@@ -33,7 +35,7 @@ module Capcode::Views
   def index
     h1 "Hello !"
     p "It's #{@time}"
-    a "Try Coffee !", :href => "javascript:alert_me();"
+    a "Try Less !", :href => "http://lesscss.org/"
   end
 end
 
