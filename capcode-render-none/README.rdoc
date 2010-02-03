@@ -1,3 +1,9 @@
 = capcode-render-none
 
 Capcode plugin to render nothing
+
+= WARNING
+
+This plugin is deprecated, please use :
+
+	render 204 => ...
