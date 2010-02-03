@@ -11,6 +11,7 @@ PACKAGES = %w{
   capcode-render-erb
   capcode-render-haml
   capcode-render-json
+  capcode-render-less
   capcode-render-markaby
   capcode-render-mustache
   capcode-render-none
@@ -40,5 +41,12 @@ desc "Release all gems to gemcutter"
 task :release do 
   PACKAGES.each do |dir|
     Dir.chdir(dir) { rake 'gemcutter:release' }
+  end
+end
+
+desc "Install all gems"
+task :install do 
+  PACKAGES.each do |dir|
+    Dir.chdir(dir) { rake 'install' }
   end
 end
