@@ -1,0 +1,3 @@
+= capcode-all-plugins
+
+Use this gem if you want to install all Capcode plugins

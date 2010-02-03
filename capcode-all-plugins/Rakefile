@@ -1,0 +1,24 @@
+require 'rubygems'
+require 'rake'
+
+EXCLUDE = /capcode-render-none/
+GEMS = Dir.glob( File.expand_path(File.dirname(File.expand_path(__FILE__))+"/..")+"/*" ).delete_if{ |f| 
+  File.directory?(f) == false or EXCLUDE.match(f)
+}.map{ |f| File.basename(f) }
+
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gem|
+    gem.name = "capcode-all-plugins"
+    gem.summary = %Q{This gem install all Capcode plugins}
+    gem.description = gem.summary
+    gem.email = "gregoire.lejeune@free.fr"
+    gem.homepage = "http://github.com/glejeune/Capcode.more/tree/master/%s" % gem.name
+    gem.authors = ["Gregoire Lejeune"]
+    
+    GEMS.each { |f| gem.add_dependency(f) }
+  end
+  Jeweler::GemcutterTasks.new
+rescue LoadError
+  puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
+end
