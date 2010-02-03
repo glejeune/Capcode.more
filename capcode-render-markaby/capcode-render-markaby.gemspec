@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Gregoire Lejeune"]
-  s.date = %q{2010-01-07}
+  s.date = %q{2010-02-03}
   s.description = %q{Capcode plugin to render via Markaby}
   s.email = %q{gregoire.lejeune@free.fr}
   s.extra_rdoc_files = [
@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "capcode-render-markaby.gemspec",
+     "examples/render-image.rb",
      "examples/render-markaby.rb",
      "lib/capcode/render/markaby.rb"
   ]
