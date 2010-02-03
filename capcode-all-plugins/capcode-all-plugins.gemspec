@@ -15,6 +15,13 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = [
     "README.rdoc"
   ]
+  s.files = [
+    "LICENSE",
+     "README.rdoc",
+     "Rakefile",
+     "VERSION",
+     "capcode-all-plugins.gemspec"
+  ]
   s.homepage = %q{http://github.com/glejeune/Capcode.more/tree/master/capcode-all-plugins}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
@@ -26,7 +33,6 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<capcode-all-plugins>, [">= 0"])
       s.add_runtime_dependency(%q<capcode-base-activerecord>, [">= 0"])
       s.add_runtime_dependency(%q<capcode-base-couch_foo>, [">= 0"])
       s.add_runtime_dependency(%q<capcode-base-couchrest>, [">= 0"])
@@ -48,7 +54,6 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<capcode-render-webdav>, [">= 0"])
       s.add_runtime_dependency(%q<capcode-render-xml>, [">= 0"])
     else
-      s.add_dependency(%q<capcode-all-plugins>, [">= 0"])
       s.add_dependency(%q<capcode-base-activerecord>, [">= 0"])
       s.add_dependency(%q<capcode-base-couch_foo>, [">= 0"])
       s.add_dependency(%q<capcode-base-couchrest>, [">= 0"])
@@ -71,7 +76,6 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<capcode-render-xml>, [">= 0"])
     end
   else
-    s.add_dependency(%q<capcode-all-plugins>, [">= 0"])
     s.add_dependency(%q<capcode-base-activerecord>, [">= 0"])
     s.add_dependency(%q<capcode-base-couch_foo>, [">= 0"])
     s.add_dependency(%q<capcode-base-couchrest>, [">= 0"])

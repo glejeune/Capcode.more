@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'rake'
 
-EXCLUDE = /capcode-render-none/
+EXCLUDE = /capcode-all-plugins|capcode-render-none/
 GEMS = Dir.glob( File.expand_path(File.dirname(File.expand_path(__FILE__))+"/..")+"/*" ).delete_if{ |f| 
   File.directory?(f) == false or EXCLUDE.match(f)
 }.map{ |f| File.basename(f) }
