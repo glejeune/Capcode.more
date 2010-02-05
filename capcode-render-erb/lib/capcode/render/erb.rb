@@ -35,10 +35,11 @@ module Capcode
 
       # Get Layout
       layout = opts.delete(:layout)||:layout
-      layout_file = File.join( @erb_path, layout.to_s+".rhtml" )
-
+      layout_file = File.join( @erb_path, layout.to_s )
+      layout_file = layout_file+".rhtml" if File.extname(layout_file) == ""
+      
       # Get file
-      f = f + ".rhtml" if File.extname( f ) != ".rhtml"
+      f = f + ".rhtml" if File.extname( f ) == ""
       file = File.join( @erb_path, f )
       
       if( File.exist?( file ) )
