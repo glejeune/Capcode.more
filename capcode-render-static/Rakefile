@@ -10,6 +10,8 @@ begin
     gem.email = "gregoire.lejeune@free.fr"
     gem.homepage = "http://github.com/glejeune/Capcode.more/tree/master/%s" % gem.name
     gem.authors = ["Gregoire Lejeune"]
+    
+    gem.add_dependency('mime-types')
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
