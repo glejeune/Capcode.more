@@ -1,5 +1,5 @@
 begin
-  require 'json'
+  require 'json/pure'
 rescue LoadError => e
   raise MissingLibrary, "Json could not be loaded (is it installed?): #{e.message}"
 end

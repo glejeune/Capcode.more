@@ -1,3 +1,12 @@
 = capcode-render-json
 
 Capcode plugin to render JSON
+
+= History
+
+* 0.2.0
+** Replace json by json_pure (JRuby)
+
+* 0.1.0
+** Initial release
+
