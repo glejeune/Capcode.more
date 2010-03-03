@@ -3,7 +3,7 @@ require 'rake'
 
 begin
   require 'jeweler'
-  Jeweler::Tasks.new do |gem|
+  j = Jeweler::Tasks.new do |gem|
     gem.name = "capcode-render-binary"
     gem.summary = %Q{Capcode plugin to render binary file}
     gem.description = gem.summary
@@ -14,4 +14,51 @@ begin
   Jeweler::GemcutterTasks.new
 rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
+end
+
+require 'json/pure'
+require 'open-uri'
+
+VERS = j.jeweler.version
+NAME = j.jeweler.gemspec.name
+
+class Rubygems
+  def initialize
+    url = "http://rubygems.org/api/v1/gems/#{NAME}.json"
+    @version_at_rubygems = JSON.parse( open(url).read )["version"]
+  end
+  
+  def status
+    version == VERS
+  end
+  def self.status
+    self.new.status
+  end
+  
+  def version
+    @version_at_rubygems
+  end
+  def self.version
+    self.new.version
+  end
+end
+
+namespace :gemcutter do
+  desc "push to gemcutter"
+  task :push => [:build] do
+    unless Rubygems.status
+      sh %{gem push pkg/#{NAME}-#{VERS}.gem}, :verbose => true
+    else
+      puts "This gem already existe in version #{VERS}!"
+    end
+  end
+  
+  desc "check gemcutter status"
+  task :status do
+    if Rubygems.status
+      puts "This gem already existe in version #{VERS}!"
+    else
+      puts "This gem (#{VERS}) has nos been published! Last version at gemcutter is #{Rubygems.version}"
+    end
+  end
 end
