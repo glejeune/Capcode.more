@@ -17,6 +17,12 @@ module Capcode
       render :binary => :image, :content_type => "image/png"
     end
   end
+
+  class Dwl < Route '/download'
+    def get
+      render :binary => :image, :content_type => "image/png", :content_disposition => "attachment; filename=my_image.png"
+    end
+  end
 end
 
 module Capcode::Views
