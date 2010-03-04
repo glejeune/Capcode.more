@@ -19,46 +19,41 @@ end
 require 'json/pure'
 require 'open-uri'
 
-VERS = j.jeweler.version
-NAME = j.jeweler.gemspec.name
-
-class Rubygems
-  def initialize
-    url = "http://rubygems.org/api/v1/gems/#{NAME}.json"
-    @version_at_rubygems = JSON.parse( open(url).read )["version"]
+class MyGem
+  attr_reader :local_version
+  attr_reader :rubygems_version
+  attr_reader :name
+  
+  def initialize( version, name )
+    @local_version = version
+    @name = name
+    url = "http://rubygems.org/api/v1/gems/#{@name}.json"
+    @rubygems_version = JSON.parse( open(url).read )["version"]
   end
   
   def status
-    version == VERS
-  end
-  def self.status
-    self.new.status
-  end
-  
-  def version
-    @version_at_rubygems
-  end
-  def self.version
-    self.new.version
+    @rubygems_version == @local_version
   end
 end
+
+MYGEM = MyGem.new( j.jeweler.version, j.jeweler.gemspec.name )
 
 namespace :gemcutter do
   desc "push to gemcutter"
   task :push => [:build] do
-    unless Rubygems.status
-      sh %{gem push pkg/#{NAME}-#{VERS}.gem}, :verbose => true
+    unless MYGEM.status
+      sh %{gem push pkg/#{MYGEM.name}-#{MYGEM.local_version}.gem}, :verbose => true
     else
-      puts "This gem already existe in version #{VERS}!"
+      puts "This gem already existe in version #{MYGEM.local_version}!"
     end
   end
   
   desc "check gemcutter status"
   task :status do
-    if Rubygems.status
-      puts "This gem already existe in version #{VERS}!"
+    if MYGEM.status
+      puts "This gem already existe in version #{MYGEM.local_version}!"
     else
-      puts "This gem (#{VERS}) has nos been published! Last version at gemcutter is #{Rubygems.version}"
+      puts "This gem (#{MYGEM.name}) has not been pushed! Last version at gemcutter is #{MYGEM.rubygems_version}"
     end
   end
 end
