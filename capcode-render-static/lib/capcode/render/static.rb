@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'mime/types'
+require 'uri'
 
 module Capcode
   module Helpers
@@ -17,7 +18,7 @@ module Capcode
       if opts.keys.include?(:content_type)
         @response['Content-Type'] = opts[:content_type]
       else
-        @response['Content-Type'] = MIME::Types.type_for(File.join( static[:path], f ))[0].content_type
+        @response['Content-Type'] = MIME::Types.type_for(File.join( static[:path], URI.parse( f ).path ))[0].content_type
       end
       
       if !opts.keys.include?(:exact_path) or opts[:exact_path] == true

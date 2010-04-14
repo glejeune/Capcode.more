@@ -4,6 +4,9 @@ Capcode plugin to render static file
 
 = History
 
+* 0.4.0 :
+** Bug correction
+
 * 0.3.0 :
 ** Add mime/type detection
 

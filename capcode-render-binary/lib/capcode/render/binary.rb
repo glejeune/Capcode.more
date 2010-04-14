@@ -7,7 +7,11 @@ module Capcode
         @response[k] = v
       end
       
-      self.send(f) 
+      if self.respond_to?(f.to_sym)
+        self.send(f) 
+      else
+        f
+      end
     end
   end
 end
