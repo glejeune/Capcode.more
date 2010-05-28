@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{capcode-render-static}
-  s.version = "0.3.0"
+  s.version = "0.5.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Gregoire Lejeune"]
-  s.date = %q{2010-02-08}
+  s.date = %q{2010-05-27}
   s.description = %q{Capcode plugin to render static file}
   s.email = %q{gregoire.lejeune@free.fr}
   s.extra_rdoc_files = [
@@ -31,14 +31,14 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/glejeune/Capcode.more/tree/master/capcode-render-static}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.5}
+  s.rubygems_version = %q{1.3.7}
   s.summary = %q{Capcode plugin to render static file}
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
-    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<mime-types>, [">= 0"])
     else
       s.add_dependency(%q<mime-types>, [">= 0"])
