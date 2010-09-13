@@ -4,6 +4,13 @@ require 'capcode/render/markaby'
 $:.unshift( "../lib" )
 require 'capcode/base/couch_foo'
 
+# Because of couch_foo need to be corrected !
+module CouchRest
+  class Database
+    alias_method :delete, :delete_doc
+  end
+end
+
 class User < Capcode::Base
   include Capcode::Resource
   

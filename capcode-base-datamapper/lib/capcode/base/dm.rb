@@ -1,6 +1,7 @@
 require 'rubygems'
 begin
   require 'dm-core'
+  require 'dm-migrations'
 rescue LoadError => e
   raise Capcode::MissingLibrary, "DataMapper could not be loaded (is it installed?): #{e.message}"
 end
@@ -25,8 +26,8 @@ module Capcode
   class << self
     def db_connect( dbfile, logfile ) #:nodoc:
       dbconfig = YAML::load(File.open(dbfile)).keys_to_sym
-      DataMapper.setup(:default, dbconfig)
       DataMapper::Logger.new(logfile, :debug)
+      DataMapper.setup(:default, dbconfig)
       DataMapper.auto_upgrade!
     end
   end
