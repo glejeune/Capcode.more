@@ -1,2 +1,3 @@
 adapter: sqlite3
-database: dm_blog.db
+path: dm_blog.db
+host: localhost
