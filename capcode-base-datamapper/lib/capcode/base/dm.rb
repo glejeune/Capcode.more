@@ -26,8 +26,9 @@ module Capcode
   class << self
     def db_connect( dbfile, logfile ) #:nodoc:
       dbconfig = YAML::load(File.open(dbfile)).keys_to_sym
+      loglevel = (dbconfig.delete(:loglevel) || "error").to_sym
       DataMapper.finalize
-      DataMapper::Logger.new(logfile, :debug)
+      DataMapper::Logger.new(logfile, loglevel)
       DataMapper.setup(:default, dbconfig)
       DataMapper.auto_upgrade!
     end
