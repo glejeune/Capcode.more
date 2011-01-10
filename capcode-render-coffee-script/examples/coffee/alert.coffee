@@ -1,3 +1,3 @@
-alert_me: =>
-  alert( "Ok, render coffee !" )
-  true.
+alert_me = () -> 
+	alert( "Ok, render coffee !" ) 
+	true
